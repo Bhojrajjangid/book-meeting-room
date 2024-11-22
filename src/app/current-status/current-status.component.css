@@ -1,0 +1,57 @@
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+div {
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+}
+
+p:hover {
+  background-color: #f9f9f9;
+}
+
+span {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+span.in-use {
+  color: #ff9800;
+}
+
+span.booked {
+  color: #f44336;
+}
+
+.no-meetings {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
