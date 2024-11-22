@@ -1,0 +1,18 @@
+<h2>Current Room Status</h2>
+
+<div *ngFor="let room of rooms">
+  <h3>{{ room }}</h3>
+  <div *ngIf="getRoomStatus(room).length > 0; else noMeetings">
+    <p *ngFor="let status of getRoomStatus(room)">
+      {{ status.date }} - {{ status.timeFrom }} to {{ status.timeTo }}:
+      {{ status.status }}
+      <span *ngIf="status.status === 'Booked'">
+        - Booked by: {{ status.username }}</span
+      >
+      <span *ngIf="status.status === 'In-Use'"> - In Use</span>
+    </p>
+  </div>
+  <ng-template #noMeetings>
+    <p>No meetings scheduled for this room.</p>
+  </ng-template>
+</div>

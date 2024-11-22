@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "book-meeting-room"
+    }
+  },
+  "defaultProject": "book-meeting-room",
+  "cli": {
+    "analytics": false
+  }
 }

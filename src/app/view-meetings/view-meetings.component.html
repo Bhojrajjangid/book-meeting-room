@@ -1,0 +1,35 @@
+<h2>Meetings for {{ selectedRoom }}</h2>
+
+<select [(ngModel)]="selectedRoom" (change)="onRoomChange(selectedRoom)">
+  <option
+    *ngFor="let room of ['Room 1', 'Room 2', 'Room 3', 'Room 4', 'Room 5']"
+    [value]="room"
+  >
+    {{ room }}
+  </option>
+</select>
+
+<table *ngIf="meetings.length > 0; else noMeetings">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Agenda</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let meeting of meetings">
+      <td>{{ meeting.username }}</td>
+      <td>{{ meeting.date }}</td>
+      <td>{{ meeting.timeFrom }} - {{ meeting.timeTo }}</td>
+      <td>{{ meeting.agenda }}</td>
+      <td>{{ meeting.status }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #noMeetings>
+  <p>No meetings scheduled for this room.</p>
+</ng-template>

@@ -1,0 +1,54 @@
+<h2>Book a Meeting Room</h2>
+<form [formGroup]="meetingForm" (ngSubmit)="bookMeeting()">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username" required />
+    <div *ngIf="username.invalid && username.touched">
+      <small *ngIf="username.errors?.required">Username is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="room">Meeting Room:</label>
+    <select formControlName="room" required>
+      <option *ngFor="let room of rooms" [value]="room">{{ room }}</option>
+    </select>
+    <div *ngIf="room.invalid && room.touched">
+      <small *ngIf="room.errors?.required">Please select a room.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="date">Date:</label>
+    <input type="date" id="date" formControlName="date" required />
+    <div *ngIf="date.invalid && date.touched">
+      <small *ngIf="date.errors?.required">Date is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="timeFrom">Start Time:</label>
+    <input type="time" id="timeFrom" formControlName="timeFrom" required />
+    <div *ngIf="timeFrom.invalid && timeFrom.touched">
+      <small *ngIf="timeFrom.errors?.required">Start time is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="timeTo">End Time:</label>
+    <input type="time" id="timeTo" formControlName="timeTo" required />
+    <div *ngIf="timeTo.invalid && timeTo.touched">
+      <small *ngIf="timeTo.errors?.required">End time is required.</small>
+    </div>
+  </div>
+
+  <div>
+    <label for="agenda">Agenda:</label>
+    <textarea id="agenda" formControlName="agenda" required></textarea>
+    <div *ngIf="agenda.invalid && agenda.touched">
+      <small *ngIf="agenda.errors?.required">Agenda is required.</small>
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="meetingForm.invalid">Book Meeting</button>
+</form>
