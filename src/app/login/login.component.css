@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+  text-align: center;
+}
+
+.login-card label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.login-card input[type="text"].ng-touched.ng-invalid,
+.login-card input[type="password"].ng-touched.ng-invalid {
+  border-color: red;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.login-card input[type="text"]:focus,
+.login-card input[type="password"]:focus {
+  border-color: #2575fc;
+  outline: none;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.5);
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  text-align: left;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2575fc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-card button:hover {
+  background-color: #1a5fcc;
+}
+
+.login-card button:disabled {
+  background-color: #b5c7f7;
+  cursor: not-allowed;
+}
+
+.login-card p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-card strong {
+  font-weight: bold;
+  color: #333;
+}

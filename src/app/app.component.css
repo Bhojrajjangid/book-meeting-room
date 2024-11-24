@@ -1,77 +1,55 @@
-* {
+.app-container {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f4f7fc;
-  color: #333;
-}
-
-.app-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 header {
-  background-color: #4caf50;
-  padding: 20px 0;
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
   text-align: center;
-  color: white;
-  border-radius: 8px;
-  margin-bottom: 30px;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
+.navigation-bar {
+  background-color: #f8f9fa;
+  padding: 0.5rem 1rem;
 }
 
-nav {
-  background-color: #333;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
+.navigation-bar ul {
+  list-style: none;
   padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
+a {
   text-decoration: none;
-  font-size: 1.1rem;
-  padding: 10px 15px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+  color: #007bff;
+}
+
+a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #4caf50;
+.logout-btn:hover {
+  background-color: #c82333;
 }
 
-.content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
+.logout-li {
+  margin-left: auto;
 }

@@ -1,5 +1,8 @@
 <h2>Book a Meeting Room</h2>
 <form [formGroup]="meetingForm" (ngSubmit)="bookMeeting()">
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
   <div>
     <label for="username">Username:</label>
     <input type="text" id="username" formControlName="username" required />

@@ -3,7 +3,7 @@
     <h1>{{ title }}</h1>
   </header>
 
-  <nav>
+  <nav *ngIf="isLoggedIn" class="navigation-bar">
     <ul>
       <li>
         <a routerLink="/book-room" routerLinkActive="active"
@@ -19,6 +19,9 @@
         <a routerLink="/room-status" routerLinkActive="active"
           >Current Room Status</a
         >
+      </li>
+      <li class="logout-li">
+        <button class="logout-btn" (click)="logout()">Logout</button>
       </li>
     </ul>
   </nav>
