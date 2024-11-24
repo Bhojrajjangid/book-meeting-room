@@ -1,3 +1,14 @@
+/*
+24th Nov, 2024
+TOTAL: 5 SUCCESS
+
+=============================== Coverage summary ===============================
+Statements   : 100%
+Branches     : 100%
+Functions    : 100%
+Lines        : 100%
+================================================================================
+*/
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { AppComponent } from './app.component';

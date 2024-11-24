@@ -1,3 +1,14 @@
+/*
+24th Nov, 2024
+TOTAL: 5 SUCCESS
+
+=============================== Coverage summary ===============================
+Statements   : 86.49%
+Branches     : 75%
+Functions    : 100%
+Lines        : 86.11%
+================================================================================
+*/
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MeetingRoomComponent } from './meeting-room.component';
 import { FormBuilder } from '@angular/forms';

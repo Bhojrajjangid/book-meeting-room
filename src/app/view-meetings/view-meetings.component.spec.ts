@@ -1,3 +1,14 @@
+/*
+24th Nov, 2024
+TOTAL: 3 SUCCESS
+
+=============================== Coverage summary ===============================
+Statements   : 100%
+Branches     : 100%
+Functions    : 100%
+Lines        : 100%
+================================================================================
+*/
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ViewMeetingsComponent } from './view-meetings.component';
 import { MeetingRoomService } from '../services/meeting-room.service';
